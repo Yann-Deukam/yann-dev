@@ -9,12 +9,12 @@ import ThemeProvider from "@/components/providers/ThemeProvider";
 const satoshi = localFont({
   src: [
     {
-      path: "../public/fonts/Satoshi-Variable.woff2",
+      path: "../fonts/Satoshi-Variable.woff2",
       weight: "300 900",
       style: "normal",
     },
     {
-      path: "../public/fonts/Satoshi-VariableItalic.woff2",
+      path: "../fonts/Satoshi-VariableItalic.woff2",
       weight: "300 900",
       style: "italic",
     },

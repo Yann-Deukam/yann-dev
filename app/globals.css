@@ -145,251 +145,30 @@
   }
 }
 
+/* Add to globals.css, below the existing @theme inline block.
+   Creates the animate-hero-drift-a and animate-hero-drift-b utilities used by Hero.tsx. */
 
-/* =========================================
-   STACK MARQUEE
-========================================= */
-/* =========================================
-   STACK SECTION
-========================================= */
-/* 
-.stack-section {
-  position: relative;
-  overflow: hidden;
-  padding: 6rem 0 4rem;
-  background: var(--background);
-  color: var(--foreground);
-}
+@theme {
+  --animate-hero-drift-a: hero-drift-a 18s ease-in-out infinite;
+  --animate-hero-drift-b: hero-drift-b 22s ease-in-out infinite;
 
-.stack-intro {
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 0 1.5rem;
-}
-
-.stack-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1.25rem;
-  color: var(--muted-foreground);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-
-.stack-status-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent);
-  animation: stack-pulse 2s ease-out infinite;
-}
-
-@keyframes stack-pulse {
-  to {
-    box-shadow: 0 0 0 0.6rem transparent;
-  }
-}
-
-.stack-heading {
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.04em;
-}
-
-.stack-heading span {
-  color: var(--primary);
-}
-
-.stack-description {
-  max-width: 34rem;
-  margin-top: 1.5rem;
-  color: var(--muted-foreground);
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* ---------- Marquee ---------- */
-/*
-.stack-marquee {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.stack-track {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  min-width: 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
-}
-
-.stack-track:last-child {
-  border-bottom: 1px solid var(--border);
-}
-
-.stack-track-label {
-  padding-left: max(1.5rem, calc((100vw - 1200px) / 2));
-  color: var(--muted-foreground);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-
-.stack-window {
-  min-width: 0;
-  overflow: hidden;
-  position: relative;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 4%,
-    #000 96%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 4%,
-    #000 96%,
-    transparent
-  );
-}
-
-.stack-rail {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  will-change: transform;
-}
-
-/* Both groups must be identical in width for the -50% loop to be seamless:
-   spacing lives INSIDE each item (margin-right), nothing extra on the group. */
-/* .stack-group {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-}
-
-.stack-item {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 0.75rem;
-  margin-right: 1rem;
-  padding: 0.85rem 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--panel);
-  color: var(--foreground);
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
-} */
-
-/* .stack-item:hover {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: var(--primary-foreground);
-}
-
-.stack-item-mark {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 2px;
-  background: var(--accent);
-  transform: rotate(45deg);
-} */
-
-/* ---------- Footnote ---------- */
-
-/* .stack-footnote {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 2.5rem auto 0;
-  padding: 0 1.5rem;
-  color: var(--muted-foreground);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-
-.stack-footnote-line {
-  width: 3rem;
-  height: 1px;
-  background: var(--border);
-} */
-
-/* ---------- Responsive ---------- */
-
-/* @media (max-width: 768px) {
-  .stack-section {
-    padding: 4rem 0 3rem;
+  @keyframes hero-drift-a {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(8vw, -6vh, 0) scale(1.12);
+    }
   }
 
-  .stack-intro {
-    margin-bottom: 2.5rem;
-  }
-
-  .stack-track {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
-    padding: 1.25rem 0;
-  }
-
-  .stack-track-label {
-    padding-left: 1.5rem;
-  }
-} */
-
-/* @media (prefers-reduced-motion: reduce) {
-  .stack-status-dot {
-    animation: none;
+  @keyframes hero-drift-b {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(-10vw, 5vh, 0) scale(0.92);
+    }
   }
 }
-
-.stack-section {
-  --stack-gutter: max(1.5rem, calc((100vw - 1200px) / 2));
-} */
-/*
-.stack-track {
-  display: grid;
-  grid-template-columns: calc(var(--stack-gutter) + 170px) minmax(0, 1fr);
-  align-items: center;
-  gap: 0;
-  min-width: 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
-}
-
-.stack-track-label {
-  padding-left: var(--stack-gutter);
-  color: var(--muted-foreground);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .stack-track {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
-  }
-
-  .stack-track-label {
-    padding-left: 1.5rem;
-  }
-} 
-*/

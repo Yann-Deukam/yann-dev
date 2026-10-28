@@ -105,15 +105,15 @@ export default function Footer() {
       {/* Soft light behind the glass */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 left-[8%] -z-10 size-[28rem] rounded-full bg-accent/15 blur-[120px] dark:bg-accent/25"
+        className="pointer-events-none absolute -top-24 left-[8%] -z-10 size-112 rounded-full bg-accent/15 blur-[120px] dark:bg-accent/25"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-10 right-[6%] -z-10 size-[32rem] rounded-full bg-primary/15 blur-[140px] dark:bg-primary/30"
+        className="pointer-events-none absolute top-10 right-[6%] -z-10 size-128 rounded-full bg-primary/15 blur-[140px] dark:bg-primary/30"
       />
 
       {/* Glass card */}
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-300 px-6">
         <div className={`${glass} rounded-3xl`}>
           <div className="grid gap-10 p-8 md:grid-cols-[1.2fr_1fr] md:gap-0 md:p-12">
             {/* Left */}
@@ -216,7 +216,7 @@ export default function Footer() {
         onPointerMove={onMove}
         onPointerLeave={onLeave}
         aria-hidden
-        className="relative -mb-[0.3em] mt-10 text-[21vw] leading-none font-black tracking-[-0.06em] select-none md:mt-16"
+        className="relative mb-[-0.3em] mt-10 text-[21vw] leading-none font-black tracking-[-0.06em] select-none md:mt-16"
       >
         <div className="flex justify-center whitespace-nowrap">
           {letters.map((char, i) => (
@@ -234,7 +234,7 @@ export default function Footer() {
         <div
           ref={glowRef}
           style={{ "--mx": "-999px", "--my": "-999px" } as React.CSSProperties}
-          className="pointer-events-none absolute inset-0 flex justify-center whitespace-nowrap opacity-0 [-webkit-mask-image:radial-gradient(300px_circle_at_var(--mx)_var(--my),#000,transparent)] [mask-image:radial-gradient(300px_circle_at_var(--mx)_var(--my),#000,transparent)]"
+          className="pointer-events-none absolute inset-0 flex justify-center whitespace-nowrap opacity-0 [-webkit-mask-image:radial-gradient(300px_circle_at_var(--mx)_var(--my),#000,transparent)] mask-[radial-gradient(300px_circle_at_var(--mx)_var(--my),#000,transparent)]"
         >
           {letters.map((char, i) => (
             <span
