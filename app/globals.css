@@ -172,3 +172,63 @@
     }
   }
 }
+
+/* Add to globals.css, next to your existing hero-drift @theme block.
+   Same pattern: creates animate-comet, animate-ring, animate-burst, animate-greeting. */
+
+@theme {
+  --animate-comet: comet 6s linear infinite;
+  --animate-ring: ring 3s ease-out infinite;
+  --animate-burst: burst 1.8s ease-out infinite;
+  --animate-greeting: greeting 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes comet {
+    0% {
+      stroke-dashoffset: 0.12;
+      opacity: 1;
+    }
+    55% {
+      stroke-dashoffset: -1;
+      opacity: 1;
+    }
+    56%,
+    100% {
+      stroke-dashoffset: -1;
+      opacity: 0;
+    }
+  }
+
+  @keyframes ring {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.7;
+    }
+    70%,
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes burst {
+    from {
+      transform: scale(0.2);
+      opacity: 0.9;
+    }
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  @keyframes greeting {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -105,7 +105,7 @@ export default function Footer() {
       {/* Soft light behind the glass */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 left-[8%] -z-10 size-112 rounded-full bg-accent/15 blur-[120px] dark:bg-accent/25"
+        className="pointer-events-none absolute left-[8%] -z-10 size-112 rounded-full bg-accent/15 blur-[120px] dark:bg-accent/25"
       />
       <div
         aria-hidden
