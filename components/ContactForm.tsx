@@ -55,9 +55,9 @@ export function ContactForm() {
 
   return (
     <GlassCard className="p-5 sm:p-8">
-      <h2 className="text-xl font-medium sm:text-2xl">Tell us what you need</h2>
+      <h2 className="text-xl font-medium sm:text-2xl">Let's have a talk</h2>
       <p className="mt-1 text-sm text-foreground/70 sm:mt-2 sm:text-base">
-        Our team is ready to help with every detail, big or small.
+        Endeavour to fill in the form for us to connect
       </p>
 
       <form onSubmit={handleSubmit} className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2">

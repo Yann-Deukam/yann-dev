@@ -15,7 +15,7 @@ const PANEL_COPY: Record<Phase, string> = {
 const PANEL_STYLE: Record<Phase, string> = {
   idle: "bg-foreground/5 text-foreground",
   waiting: "bg-accent/15 text-foreground",
-  ready: "bg-primary text-primary-foreground",
+  ready: "bg-green-100 text-green-500",
   result: "bg-foreground/5 text-foreground",
   early: "bg-accent text-accent-foreground",
 };

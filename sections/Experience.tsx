@@ -5,8 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { glass } from "@/constants/styles";
-import { EXPERIENCE } from "./experience";
 import Icon from "@/components/Icon";
+import { EXPERIENCE } from "@/constants/experience";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 

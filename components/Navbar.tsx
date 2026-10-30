@@ -23,8 +23,8 @@ const NAVIGATION = [
 
 const SOCIAL_LINKS = [
   { label: "GitHub", href: "https://github.com/Yann-Deukam" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/" },
-  { label: "Email", href: "mailto:contact@g-ni.studio" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/deukam-yann" },
+  { label: "Email", href: "mailto:yanndeukam@gmail.com" },
 ];
 
 /* ───────────── Config ───────────── */
@@ -371,7 +371,7 @@ export default function Navbar() {
           </p>
 
           <div className="mt-3.5 flex flex-wrap gap-1.5 short:mt-2">
-            {["DEVELOPMENT", "UI/UX", "CREATIVE CODE"].map((tag) => (
+            {["ENGINEERING", "DEVELOPMENT", "CREATIVE"].map((tag) => (
               <span
                 key={tag}
                 className="border border-white/30 px-2 py-1.25 text-[0.58rem] font-bold tracking-[0.06em]"

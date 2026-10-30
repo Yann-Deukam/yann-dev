@@ -11,9 +11,9 @@ export default function Playground() {
     >
       <div className="mx-auto flex max-w-300 flex-col gap-6">
         <div className="flex flex-col gap-4">
-          <p className="text-xs font-semibold tracking-[0.3em] text-accent uppercase">
+          {/* <p className="text-xs font-semibold tracking-[0.3em] text-accent uppercase">
             Playground
-          </p>
+          </p> */}
           <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] font-semibold tracking-[-0.04em]">
             Digital Playground
           </h2>

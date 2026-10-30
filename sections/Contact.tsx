@@ -38,10 +38,10 @@ export function Contact() {
       <div className="pointer-events-none relative mx-auto grid max-w-300 gap-8 px-6 pb-16 sm:pb-20 lg:grid-cols-[1fr_minmax(0,34rem)] lg:grid-rows-[auto_1fr] lg:gap-x-14 lg:py-24">
         <div className="max-w-xl lg:col-start-1 lg:row-start-1">
           <h1 className="text-3xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            You have questions, we have answers
+            You have questions, come get answers
           </h1>
           <p className="mt-4 text-foreground/70">
-            Wherever you are in the world, your message finds its way to our team in Cameroon.
+            Wherever you are in the world, your message finds its way to me.
           </p>
         </div>
 

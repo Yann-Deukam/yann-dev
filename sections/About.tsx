@@ -168,7 +168,7 @@ export default function AboutSection() {
         ref={stageRef}
         className="relative flex h-dvh min-h-120 flex-col justify-center gap-7 overflow-hidden px-6 py-16 md:gap-10 md:px-14 md:py-20"
       >
-        <p className="text-xs font-semibold tracking-[0.3em] text-accent uppercase">About</p>
+        <p className="text-xs font-semibold tracking-[0.3em] text-accent uppercase">A little more about me</p>
 
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-[clamp(1.35rem,5.2vw,3.2rem)] leading-snug font-semibold tracking-[-0.03em] md:leading-tight">
           {LINES.map((line, lineIndex) => (
@@ -193,7 +193,7 @@ export default function AboutSection() {
           ))}
         </div>
 
-        <p className="text-sm text-muted-foreground">Keep scrolling</p>
+        <p className="text-sm text-muted-foreground flex right-0">Keep scrolling</p>
       </div>
     </section>
   );

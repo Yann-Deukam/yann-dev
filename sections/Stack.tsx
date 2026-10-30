@@ -11,7 +11,7 @@ const stacks = [
   {
     label: "01 / FRONTEND",
     direction: 1,
-    technologies: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "GSAP", "Angular"],
+    technologies: ["React", "Next.js", "React Native", "TypeScript", "JavaScript", "Tailwind CSS", "GSAP"],
   },
   {
     label: "02 / BACKEND & DATA",
@@ -21,7 +21,7 @@ const stacks = [
   {
     label: "03 / TOOLS & DESIGN",
     direction: 1,
-    technologies: ["Git", "Docker", "Figma", "UI/UX", "WordPress", "React Native", "Three.js"],
+    technologies: ["Git", "Docker", "UI/UX", "Three.js", "Tanstack", "Expo", "Claude"],
   },
 ];
 

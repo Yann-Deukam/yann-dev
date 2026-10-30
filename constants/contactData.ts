@@ -19,7 +19,7 @@ export const MOBILE_ROUTES = 5;
 
 export const GREETINGS = ["Bienvenue", "Welcome"];
 
-export const INQUIRY_TYPES = ["Booking", "General", "Wedding", "Corporate", "Others"] as const;
+export const INQUIRY_TYPES = ["General", "Offer", "Others"] as const;
 export type InquiryType = (typeof INQUIRY_TYPES)[number];
 
 // Placeholder content: swap with your real details.
@@ -29,9 +29,9 @@ export const CONTACT_INFO = {
   email: "yanndeukam@gmail.com",
   phone: "+237 697 443 248",
   socials: [
-    { label: "Github", href: "https://github.com" },
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
+    { label: "Github", href: "https://github.com/yann-deukam" },
+    { label: "Instagram", href: "https://instagram.com/the.real.g_ni" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/deukam-yann" },
 
   ],
 };
