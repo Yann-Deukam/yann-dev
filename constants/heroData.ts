@@ -17,7 +17,7 @@ export const HERO = {
 
   secondaryCta: {
     label: "Explore my work",
-    href: "/#work",
+    href: "/#projects",
   },
 
   buildNotes: [

@@ -13,12 +13,12 @@ gsap.registerPlugin(useGSAP);
 /* ───────────── Data ───────────── */
 
 const NAVIGATION = [
-  { number: "01", label: "Home", href: "#home" },
-  { number: "02", label: "About", href: "#about" },
-  { number: "03", label: "Experience", href: "#experience" },
-  { number: "04", label: "Projects", href: "#projects" },
-  { number: "05", label: "Blog", href: "#blog" },
-  { number: "06", label: "Playground", href: "#playground" },
+  { number: "01", label: "Home", href: "/#home" },
+  { number: "02", label: "About", href: "/#about" },
+  { number: "03", label: "Experience", href: "/#experience" },
+  { number: "04", label: "Projects", href: "/#projects" },
+  { number: "05", label: "Blog", href: "/#blog" },
+  { number: "06", label: "Playground", href: "/#playground" },
 ];
 
 const SOCIAL_LINKS = [
@@ -247,7 +247,7 @@ export default function Navbar() {
       {/* Top bar */}
       <header className="pointer-events-none fixed inset-x-0 top-0 z-310 flex items-center justify-between gap-5 px-[clamp(18px,4vw,56px)] py-4 mobile:px-4 mobile:py-3">
        <Link
-  href="#home"
+  href="/#home"
   aria-label="Y. Deukam — Home"
   onClick={closeMenu}
   className={`${glass} pointer-events-auto inline-flex h-11 items-center gap-1 rounded-full pl-1.5 pr-5 no-underline transition duration-200 hover:border-primary mobile:h-10 mobile:pr-4`}
@@ -324,7 +324,7 @@ export default function Navbar() {
           <ul className="m-0 flex flex-1 list-none flex-col justify-center p-0">
             {NAVIGATION.map((item) => (
               <li key={item.number} className="menu-item overflow-hidden border-b border-border">
-                <a
+                <Link
                   href={item.href}
                   onClick={closeMenu}
                   className="group grid grid-cols-[32px_1fr_auto] items-center gap-3 py-2.25 text-[clamp(1.35rem,3.3vh,2.15rem)] font-bold leading-[1.12] tracking-[-0.045em] text-foreground no-underline transition-colors duration-180 hover:text-primary short:py-1.75 short:text-[clamp(1.15rem,3.2vh,1.65rem)] mobile:text-[clamp(1.3rem,3.5vh,1.8rem)]"
@@ -339,16 +339,16 @@ export default function Navbar() {
                   >
                     ↗
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           <div className="mt-4 flex flex-wrap justify-between gap-x-4 gap-y-2 pt-3.5 text-[0.78rem] text-muted-foreground short:mt-2.5 short:pt-2.5 tiny:text-[0.7rem]">
             <span>Have a project in mind?</span>
-            <a href="#contact" onClick={closeMenu} className="font-bold text-primary no-underline">
+            <Link href="/#contact" onClick={closeMenu} className="font-bold text-primary no-underline">
               Let&apos;s talk ↗
-            </a>
+            </Link>
           </div>
         </section>
 

@@ -112,7 +112,8 @@ export function ContactForm() {
         </button>
 
         <p role="status" aria-live="polite" className="min-h-5 text-center text-sm sm:col-span-2">
-          {status === "sent" && "Message sent. We'll reply within one business day."}
+         {status === "sent" &&
+  "Message sent successfully. I'll get back to you soon."}
           {status === "error" && "Couldn't send your message. Check your connection and try again."}
         </p>
       </form>

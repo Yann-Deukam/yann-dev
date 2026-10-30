@@ -1,4 +1,5 @@
 import { glass, glassHover } from "@/constants/styles";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 type ButtonProps = {
@@ -77,7 +78,7 @@ export default function Button({
 
   if (href) {
     return (
-      <a
+      <Link
         href={href}
         target={target}
         rel={rel}
@@ -85,7 +86,7 @@ export default function Button({
         className={classes}
       >
         {content}
-      </a>
+      </Link>
     );
   }
 
