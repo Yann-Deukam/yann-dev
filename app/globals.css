@@ -232,3 +232,104 @@
     }
   }
 }
+/* Add to globals.css, in its own @theme block.
+   Creates the animate-tile-in and animate-tile-float utilities used by SquareField.
+   Restart the dev server after adding these, so Tailwind picks them up. */
+
+@theme {
+  --animate-tile-in: tile-in 1400ms ease-out both;
+  --animate-tile-float: tile-float 9s ease-in-out infinite;
+
+  @keyframes tile-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes tile-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* Add to globals.css, in its own @theme block.
+   Creates the animate-tile-wave utility used by SquareField.
+   Restart the dev server afterwards, so Tailwind picks it up. */
+
+@theme {
+  --animate-tile-wave: tile-wave 6s ease-in-out infinite;
+
+  @keyframes tile-wave {
+    0%,
+    100% {
+      opacity: 0.25;
+      transform: scale(0.85);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Add to globals.css, in its own @theme block.
+   Creates the utilities used by Hero.tsx and HeroHeadline.tsx:
+   animate-hero-rise, animate-hero-fade, animate-hero-drift-a and animate-hero-drift-b.
+   These are CSS animations, so they play on every load, independent of JavaScript timing. */
+
+@theme {
+  --animate-hero-rise: hero-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-fade: hero-fade 0.9s ease-out both;
+  --animate-hero-drift-a: hero-drift-a 18s ease-in-out infinite;
+  --animate-hero-drift-b: hero-drift-b 22s ease-in-out infinite;
+
+  @keyframes hero-rise {
+    from {
+      transform: translateY(115%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-fade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-drift-a {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(8vw, -6vh, 0) scale(1.12);
+    }
+  }
+
+  @keyframes hero-drift-b {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(-10vw, 5vh, 0) scale(0.92);
+    }
+  }
+}

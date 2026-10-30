@@ -19,7 +19,12 @@ type ButtonProps = {
 };
 
 const base =
-  "group inline-flex items-center gap-3 rounded-full py-2 pr-2 pl-6 text-sm font-medium transition-all duration-300 motion-safe:hover:-translate-y-0.5";
+  "group inline-flex items-center gap-3 rounded-full text-sm font-medium transition-all duration-300 motion-safe:hover:-translate-y-0.5";
+
+const padding = {
+  arrow: "py-2 pr-2 pl-6",
+  plain: "px-6 py-2 justify-center",
+};
 
 const variants = {
   glass: `${glass} ${glassHover} text-foreground`,
@@ -34,12 +39,6 @@ const chips = {
     "bg-background text-foreground group-hover:bg-primary-foreground group-hover:text-primary",
 };
 
-/**
- * The site's button. Use it everywhere a call to action appears.
- *
- * <Button href="/#contact" arrow>Let&apos;s Talk</Button>
- * <Button variant="solid" onClick={submit}>Send</Button>
- */
 export default function Button({
   children,
   variant = "glass",
@@ -52,15 +51,23 @@ export default function Button({
   "aria-label": ariaLabel,
   className = "",
 }: ButtonProps) {
-  const classes = `${base} ${variants[variant]} ${className}`.trim();
+  const layout = arrow
+    ? "w-full justify-between sm:w-auto sm:justify-start"
+    : "justify-center";
+
+  const pad = arrow ? padding.arrow : padding.plain;
+
+  const classes =
+    `${base} ${layout} ${pad} ${variants[variant]} ${className}`.trim();
 
   const content = (
     <>
       {children}
+
       {arrow && (
         <span
           aria-hidden
-          className={`grid size-8 place-items-center rounded-full transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${chips[variant]}`}
+          className={`grid size-8 shrink-0 place-items-center rounded-full transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${chips[variant]}`}
         >
           ↗
         </span>
@@ -70,14 +77,25 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} target={target} rel={rel} aria-label={ariaLabel} className={classes}>
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        aria-label={ariaLabel}
+        className={classes}
+      >
         {content}
       </a>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} aria-label={ariaLabel} className={classes}>
+    <button
+      type={type}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      className={classes}
+    >
       {content}
     </button>
   );

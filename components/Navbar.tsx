@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Moon, Sun } from "lucide-react";
+import { useTheme } from "./providers/ThemeProvider";
 
 gsap.registerPlugin(useGSAP);
 
@@ -74,7 +74,7 @@ export default function Navbar() {
   const isOpenRef = useRef(false);
 
   const [isOpen, setIsOpen] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
 
@@ -222,7 +222,7 @@ export default function Navbar() {
 
   /* ── Theme toggle with circular reveal ── */
   const handleThemeToggle = () => {
-    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+    const nextTheme = theme === "dark" ? "light" : "dark";
     const button = themeButtonRef.current;
     const doc = document as ViewTransitionDocument;
 
@@ -269,7 +269,7 @@ export default function Navbar() {
             title="Toggle theme"
             className={iconButton}
           >
-            {mounted && resolvedTheme === "dark" ? (
+            {mounted && theme === "dark" ? (
               <Sun size={19} strokeWidth={1.7} />
             ) : mounted ? (
               <Moon size={19} strokeWidth={1.7} />

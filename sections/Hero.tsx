@@ -49,14 +49,30 @@ export default function Hero() {
             className={`${glass} flex w-full flex-col gap-5 rounded-3xl p-5 md:max-w-md md:gap-6 md:p-6`}
           >
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-              {HERO.support}
+              I'm{" "}
+              <strong className="font-semibold italic text-foreground">
+                Yann Deukam
+              </strong>
+              , a{" "}
+              <strong className="font-semibold italic text-foreground">
+                Software Engineer & Creative Developer
+              </strong>{" "}
+              based in{" "}
+              <strong className="font-semibold italic text-foreground">
+                Douala, Cameroon
+              </strong>
+              . I build web and mobile products, combining{" "}
+              <strong className="font-semibold italic text-foreground">
+                frontend engineering, UI/UX and visual design
+              </strong>
+              .
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button href={HERO.primaryCta.href} arrow className="w-full sm:w-fit">
                 {HERO.primaryCta.label}
               </Button>
-              <Button href={HERO.secondaryCta.href} className="w-full sm:w-fit">
+              <Button href={HERO.secondaryCta.href} className="w-full sm:w-fit pr-6">
                 {HERO.secondaryCta.label}
               </Button>
             </div>

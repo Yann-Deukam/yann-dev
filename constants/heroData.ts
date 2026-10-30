@@ -1,30 +1,29 @@
+
 export const HERO = {
-  /**
-   * The headline, as two blocks of two rows. The first block sits left and the
-   * second sits right, so the sentence reads down the page as a diagonal.
-   */
   blocks: [
-    ["We design", "the brand,"],
-    ["then build", "the site."],
+    ["I Design", "and Build"],
+    ["Digital", "Experiences."],
   ],
 
   support:
-    "Branding, packaging, illustration and websites for businesses that want one look, from the label to the landing page.",
+    "I'm Yann Deukam, a Software Engineer & Creative Developer based in Douala, Cameroon. I build web and mobile products, combining frontend engineering with UI/UX and visual design.",
 
-  /** Shown on devices with a mouse, to point out the lens. */
-  hint: "Move over the headline to see how it’s built.",
+  hint: "Move over the headline to see how it's built.",
 
-  primaryCta: { label: "Start a project", href: "/#contact" },
-  secondaryCta: { label: "See the work", href: "/#work" },
+  primaryCta: {
+    label: "Start a project",
+    href: "/#contact",
+  },
 
-  /**
-   * What the lens shows over the glass card: the same content, as the build
-   * sees it. Mirrors the markup in Hero.tsx, so keep the two in step.
-   */
+  secondaryCta: {
+    label: "Explore my work",
+    href: "/#work",
+  },
+
   buildNotes: [
-    "// branding, packaging,",
-    "// illustration, websites",
-    '<a href="/#contact" />',
-    '<a href="/#work" />',
+    "// software engineering",
+    "// frontend, UI/UX & visual design",
+    "// web and mobile applications",
+    "// Douala, Cameroon",
   ],
 } as const;
